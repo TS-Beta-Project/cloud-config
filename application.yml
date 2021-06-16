@@ -4,6 +4,13 @@ spring:
   sleuth:
     sampler:
       probability: 1.0
+  cloud: 
+    discovery: 
+      enabled: true
+    gateway:
+      locator:
+      enabled: true
+        lower-case-service-id: true
 eureka:
   client:
     register-with-eureka: true
@@ -14,3 +21,7 @@ eureka:
     hostname: ec2-18-229-162-130.sa-east-1.compute.amazonaws.com
     preferIpAddress: true
     leaseRenewalIntervalInSeconds: 60
+    
+    spring.cloud.discovery.enabled=true
+spring.cloud.gateway.discovery.locator.lower-case-service-id= true
+spring.cloud.gateway.discovery.locator.enabled= true
