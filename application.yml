@@ -1,6 +1,6 @@
 spring:
   zipkin:
-    base-url: http://localhost:9411/
+    base-url: http://consulti.conviniec:9411/
   sleuth:
     sampler:
       probability: 1.0
@@ -9,7 +9,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://ec2-18-228-205-249.sa-east-1.compute.amazonaws.com:8761/eureka/
+      defaultZone: http://ec2-18-229-162-130.sa-east-1.compute.amazonaws.com:8761/eureka/
   instance:
     hostname: localhost
     preferIpAddress: true
