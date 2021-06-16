@@ -1,6 +1,6 @@
 spring:
   zipkin:
-    base-url: http://consulti.conviniec:9411/
+    base-url: http://consulti.convini.ec:9411/
   sleuth:
     sampler:
       probability: 1.0
