@@ -1,12 +1,4 @@
 spring:
-  cloud:
-    discovery:
-      enabled: true
-    gateway:
-      discovery:
-        locator:
-          lower-case-service-id: true
-          enabled: true
   zipkin:
     base-url: http://ec2-18-228-81-105.sa-east-1.compute.amazonaws.com:9411/
   sleuth:
@@ -20,5 +12,3 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:8761/eureka/
   instance:
     hostname: ec2-18-229-162-130.sa-east-1.compute.amazonaws.com
-    preferIpAddress: true
-    leaseRenewalIntervalInSeconds: 60
