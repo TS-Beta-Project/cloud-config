@@ -1,13 +1,18 @@
+servers:
+  node1: ec2-18-229-162-130.sa-east-1.compute.amazonaws.com
+  node2: ec2-18-228-97-0.sa-east-1.compute.amazonaws.com
+  node3: ec2-18-228-81-105.sa-east-1.compute.amazonaws.com
+
 spring:
   zipkin:
-    base-url: http://ec2-18-228-81-.sa-east-1.compute.amazonaws.com:9411/
+    base-url: http://${servers.node3}:9411/
   sleuth:
     sampler:
       probability: 1.0
   data:
     mongodb:
       authentication-database: admin
-      host: ec2-18-228-81-105.sa-east-1.compute.amazonaws.com
+      host: ${servers.node3}
       password: t1ck3ts305PK_1
       port: 10404
       username: admin
@@ -23,18 +28,8 @@ eureka:
     service-url:
       defaultZone: http://${eureka.instance.hostname}:8761/eureka/
   instance:
-    hostname: ec2-18-229-162-130.sa-east-1.compute.amazonaws.com
+    hostname: ${servers.node1}
     preferIpAddress: true
-attendance:
-  entity:
-    name: attendance
-  host: ec2-18-228-97-0.sa-east-1.compute.amazonaws.com
-  port: 8102
-metadata:
-  entity:
-    name: metaDataCatalog
-  host: ec2-18-229-162-130.sa-east-1.compute.amazonaws.com
-  port: 8097
 descuento:
   cantidad-compra:
     ident: DCC_MAXC
@@ -42,3 +37,78 @@ descuento:
     ident: DCC_MAXT
   tercera-edad:
     ident: DESC_3EDAD
+attendance:
+  entity:
+    name: attendance
+  host: http://${servers.node2}
+  port: 8102
+metadata:
+  entity:
+    name: metaDataCatalog
+  host: http://${servers.node1}
+  port: 8097
+product:
+  entity:
+    name: product
+  host: http://${servers.node2}
+  port: 8090
+fares:
+  entity:
+    name: fares
+  host: http://${servers.node2}
+  port: 8081
+outlet:
+  entity:
+    name: outlet
+  host: http://${servers.node2}
+  port: 8103
+delivery:
+  entity:
+    name: delivery
+  host: http://${servers.node2}
+  port: 8104
+compensacion:
+  entity:
+    name: compensacion
+  host: http://${servers.node2}
+  port: 8199
+migracion:
+  entity:
+    name: migracion
+  host: http://${servers.node2}
+  port: 8098
+notification:
+  entity:
+    name: notification
+  host: http://${servers.node2}
+  port: 8281
+charge:
+  entity:
+    name: charge
+  host: http://${servers.node1}
+  port: 8094
+inventory:
+  entity:
+    name: inventory
+  host: http://${servers.node1}
+  port: 8099
+customer:
+  entity:
+    name: customer
+  host: http://${servers.node1}
+  port: 8098
+users:
+  entity:
+    name: users
+  host: http://${servers.node1}
+  port: 8081
+revenue:
+  entity:
+    name: revenue
+  host: http://${servers.node1}
+  port: 8096
+cert-manager:
+  entity:
+    name: cert-manager
+  host: http://${servers.node3}
+  port: 8009
