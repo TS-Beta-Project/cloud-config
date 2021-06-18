@@ -1,9 +1,22 @@
 spring:
   zipkin:
-    base-url: http://ec2-18-228-81-105.sa-east-1.compute.amazonaws.com:9411/
+    base-url: http://ec2-18-228-81-
+    .sa-east-1.compute.amazonaws.com:9411/
   sleuth:
     sampler:
       probability: 1.0
+     data:
+  mongodb:
+    authentication-database: admin
+    host: ec2-18-228-81-105.sa-east-1.compute.amazonaws.com
+    password: t1ck3ts305PK_1
+    port: 10404
+    username: admin
+  rabbitmq:
+    host: ${spring.mongodb.host}
+    port: 5673
+    username: auditor
+    password: auditor2019
 eureka:
   client:
     register-with-eureka: true
@@ -13,3 +26,23 @@ eureka:
   instance:
     hostname: ec2-18-229-162-130.sa-east-1.compute.amazonaws.com
     preferIpAddress: true
+attendance:
+    entity:
+        name: attendance
+    host: ec2-18-228-97-0.sa-east-1.compute.amazonaws.com
+    port: 8102
+metadata:
+    entity:
+        name: metaDataCatalog
+    host: ec2-18-229-162-130.sa-east-1.compute.amazonaws.com
+    port: 8097
+   
+descuento:
+    cantidad-compra:
+        ident: DCC_MAXC
+    cantidad-total:
+        ident: DCC_MAXT
+    tercera-edad:
+        ident: DESC_3EDAD
+
+
