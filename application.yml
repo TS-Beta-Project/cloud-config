@@ -72,9 +72,9 @@ compensacion:
     name: compensacion
   host: http://${servers.node2}
   port: 8199
-migracion:
+migration:
   entity:
-    name: migracion
+    name: migration
   host: http://${servers.node2}
   port: 8098
 notification:
