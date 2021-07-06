@@ -116,4 +116,4 @@ elastic-search:
   entity:
     name: elastic-search
   host: http://${servers.node3}
-  port: 9200
+  port: 8180
