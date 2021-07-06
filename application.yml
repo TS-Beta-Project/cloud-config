@@ -112,3 +112,8 @@ cert-manager:
     name: cert-manager
   host: http://${servers.node3}
   port: 8009
+elastic-search:
+  entity:
+    name: elastic-search
+  host: http://${servers.node3}
+  port: 9200
