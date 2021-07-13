@@ -117,3 +117,5 @@ elastic-search:
     name: elastic-search
   host: http://${servers.node3}
   port: 8180
+VALIDITY: 2
+VALIDITY-REFRESH: 12
