@@ -9,6 +9,7 @@ spring:
   sleuth:
     sampler:
       probability: 1.0
+  #Global config for databases, esquema changes on properties    
   data:
     mongodb:
       authentication-database: admin
@@ -118,6 +119,9 @@ elastic-search:
   host: http://${servers.node3}
   port: 8180
   ms-port: 9200
+#Time is in hours
 VALIDITY: 2
+#Time is in hours
 VALIDITY-REFRESH: 12
+#key to generate tokens
 GENERATE: BvPHGM8C0ia4uOuxxqPD5DTbWC9F9TWvPStp3pb7ARo0oK2mJ3pd3YG4lxA9i8bj6OTbadwezxgeEByY
