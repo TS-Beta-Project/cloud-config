@@ -10,7 +10,7 @@ spring:
     sampler:
       probability: 1.0
   rabbitmq:
-      host: ${spring.mongodb.host}
+      host: ${servers.node3}
       port: 5673
       username: auditor
       password: auditor2019
