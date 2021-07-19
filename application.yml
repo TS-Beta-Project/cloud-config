@@ -9,6 +9,11 @@ spring:
   sleuth:
     sampler:
       probability: 1.0
+  rabbitmq:
+      host: ${spring.mongodb.host}
+      port: 5673
+      username: auditor
+      password: auditor2019
   #Global config for databases, esquema changes on properties    
   data:
     mongodb:
@@ -17,11 +22,7 @@ spring:
       password: t1ck3ts305PK_1
       port: 10404
       username: admin
-    rabbitmq:
-      host: ${spring.mongodb.host}
-      port: 5673
-      username: auditor
-      password: auditor2019
+    
 eureka:
   client:
     register-with-eureka: true
