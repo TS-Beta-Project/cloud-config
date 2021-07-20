@@ -46,9 +46,9 @@ attendance:
   port: 8102
 metadata:
   entity:
-    name: metaDataCatalog
+    name: metadataCatalog
   host: http://${servers.node1}
-  port: 8097
+  port: 8098
 product:
   entity:
     name: product
