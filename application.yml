@@ -48,7 +48,7 @@ metadata:
   entity:
     name: metadataCatalog
   host: http://${servers.node1}
-  port: 8098
+  port: 8097
 product:
   entity:
     name: product
