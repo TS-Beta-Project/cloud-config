@@ -117,7 +117,7 @@ cert-manager:
 elastic-search:
   entity:
     name: elastic-search
-  host: http://${servers.node3}
+  host: ${servers.node3}
   port: 8180
   ms-port: 9200
 #Time is in seconds
