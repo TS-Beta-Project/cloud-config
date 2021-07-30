@@ -113,7 +113,7 @@ cert-manager:
   entity:
     name: cert-manager
   host: http://${servers.node3}
-  port: 8091
+  port: 8090
 elastic-search:
   entity:
     name: elastic-search
