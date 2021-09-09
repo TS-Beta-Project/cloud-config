@@ -1,5 +1,5 @@
 servers:
-  node1: ec2-18-229-162-130.sa-east-1.compute.amazonaws.com
+  node1: ec2-15-228-14-190.sa-east-1.compute.amazonaws.com
   node2: ec2-18-228-97-0.sa-east-1.compute.amazonaws.com
   node3: ec2-18-228-81-105.sa-east-1.compute.amazonaws.com
 
