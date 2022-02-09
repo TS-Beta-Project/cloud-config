@@ -14,7 +14,7 @@ spring:
       port: 5673
       username: auditor
       password: auditor2019
-  #Global config for databases, esquema changes on properties    
+  #Global config for databases, schema changes on properties    
   data:
     mongodb:
       authentication-database: admin
