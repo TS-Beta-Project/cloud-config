@@ -14,7 +14,7 @@ spring:
       host: ${servers.node3}
       port: 5672
       username: root
-      password: [RKfvL+64:*$A>7Gr
+      password: "[RKfvL+64:*$A>7Gr"
   #Global config for databases, schema changes on properties    
   data:
     mongodb:
