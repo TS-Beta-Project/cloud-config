@@ -30,7 +30,8 @@ eureka:
     fetch-registry: true
     service-url:
 #       defaultZone: http://${eureka.instance.hostname}:8761/eureka/
-      defaultZone: http://localhost:8761/eureka/
+#       defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://servicios.ticketshow.com.ec:9411
   instance:
     hostname: ${servers.node1}
     preferIpAddress: true
