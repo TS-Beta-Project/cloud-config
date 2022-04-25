@@ -5,8 +5,6 @@ servers:
 
 spring:
   zipkin:
-#     base-url: http://${servers.node3}:9411/
-#     base-url: http://localhost:9411
       base-url: http://servicios.ticketshow.com.ec:9411
 
   sleuth:
@@ -31,8 +29,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-#       defaultZone: http://${eureka.instance.hostname}:8761/eureka/
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
   instance:
     hostname: ${servers.node1}
     preferIpAddress: true
